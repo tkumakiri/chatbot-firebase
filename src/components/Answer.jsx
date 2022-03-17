@@ -9,11 +9,13 @@ import { Button } from '@material-ui/core'
 const Answer = (props) => {
   //   const classes = useStyles();
   return (
-    <div>
-      <Button variant="contained" color="primary">
-        {props.content}
-      </Button>
-    </div>
+    <Button
+      variant="contained"
+      color="primary"
+      onClick={() => props.select(props.content, props.nextId)}
+    >
+      {props.content}
+    </Button>
   )
 }
 
